@@ -14,22 +14,7 @@ export function Auth() {
       name: "graficas",
       path: "/graficas/home",
       icon: ChartPieIcon,
-    },
-    {
-      name: "profile",
-      path: "/graficas/home",
-      icon: UserIcon,
-    },
-    // {
-    //   name: "sign up",
-    //   path: "/auth/sign-up",
-    //   icon: UserPlusIcon,
-    // },
-    // {
-    //   name: "sign in",
-    //   path: "/auth/sign-in",
-    //   icon: ArrowRightOnRectangleIcon,
-    // },
+    }
   ];
 
   return (

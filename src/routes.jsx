@@ -1,11 +1,10 @@
 import {
   HomeIcon,
-  UserCircleIcon,
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
   QueueListIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Profile } from "@/pages/graficas";
+import { Home } from "@/pages/graficas";
 import { ToDo } from "@/pages/todo";
 import { SignIn, SignUp } from "@/pages/auth";
 
@@ -28,13 +27,7 @@ export const routes = [
         name: "tareas",
         path: "/tasks",
         element: <ToDo />,
-      },
-      // {
-      //   icon: <UserCircleIcon {...icon} />,
-      //   name: "profile",
-      //   path: "/profile",
-      //   element: <Profile />,
-      // }
+      }
     ],
   },
   {
