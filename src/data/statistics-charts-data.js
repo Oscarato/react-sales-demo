@@ -77,7 +77,7 @@ export const statisticsChartsData = [
     type: 'sales',
     color: "blue",
     title: "Ventas",
-    description: " ",
+    description: "Datos de ventas",
     footer: " ",
     data: [
       {
@@ -91,7 +91,7 @@ export const statisticsChartsData = [
     type: 'users',
     color: "green",
     title: "Usuarios Registrador",
-    description: " ",
+    description: "Lista de usuarios",
     footer: " ",
     data: [
       {
