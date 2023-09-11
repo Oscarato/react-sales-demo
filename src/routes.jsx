@@ -1,12 +1,12 @@
 import {
   HomeIcon,
   UserCircleIcon,
-  TableCellsIcon,
-  BellIcon,
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
+  QueueListIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Profile, Tables, Notifications } from "@/pages/dashboard";
+import { Home, Profile } from "@/pages/graficas";
+import { ToDo } from "@/pages/todo";
 import { SignIn, SignUp } from "@/pages/auth";
 
 const icon = {
@@ -15,32 +15,26 @@ const icon = {
 
 export const routes = [
   {
-    layout: "dashboard",
+    layout: "graficas",
     pages: [
       {
         icon: <HomeIcon {...icon} />,
-        name: "dashboard",
+        name: "gráficas",
         path: "/home",
         element: <Home />,
+      },
+      {
+        icon: <QueueListIcon {...icon} />,
+        name: "tareas",
+        path: "/tasks",
+        element: <ToDo />,
       },
       {
         icon: <UserCircleIcon {...icon} />,
         name: "profile",
         path: "/profile",
         element: <Profile />,
-      },
-      {
-        icon: <TableCellsIcon {...icon} />,
-        name: "tables",
-        path: "/tables",
-        element: <Tables />,
-      },
-      {
-        icon: <BellIcon {...icon} />,
-        name: "notifactions",
-        path: "/notifactions",
-        element: <Notifications />,
-      },
+      }
     ],
   },
   {

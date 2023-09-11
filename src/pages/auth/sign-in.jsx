@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Card,
   CardHeader,
@@ -11,6 +11,14 @@ import {
 } from "@material-tailwind/react";
 
 export function SignIn() {
+
+  let navigate = useNavigate();
+
+  const signIn = () => {
+    sessionStorage.setItem('inLogin', true)
+    navigate("/graficas/home"); 
+  }
+
   return (
     <>
       <img
@@ -30,14 +38,14 @@ export function SignIn() {
             </Typography>
           </CardHeader>
           <CardBody className="flex flex-col gap-4">
-            <Input type="email" label="Email" size="lg" />
-            <Input type="password" label="Password" size="lg" />
+            <Input type="email" value={'demo'} label="Email" size="lg" />
+            <Input type="password" value={'demo'} label="Password" size="lg" />
             <div className="-ml-2.5">
               <Checkbox label="Remember Me" />
             </div>
           </CardBody>
           <CardFooter className="pt-0">
-            <Button variant="gradient" fullWidth>
+            <Button variant="gradient" onClick={signIn} fullWidth>
               Sign In
             </Button>
             <Typography variant="small" className="mt-6 flex justify-center">

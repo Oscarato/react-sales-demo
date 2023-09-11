@@ -1,14 +1,9 @@
 import { chartsConfig } from "@/configs";
 
-const websiteViewsChart = {
+const barViewsChart = {
   type: "bar",
   height: 220,
-  series: [
-    {
-      name: "Views",
-      data: [50, 20, 10, 22, 50, 10, 40],
-    },
-  ],
+  series: [],
   options: {
     ...chartsConfig,
     colors: "#fff",
@@ -20,20 +15,15 @@ const websiteViewsChart = {
     },
     xaxis: {
       ...chartsConfig.xaxis,
-      categories: ["M", "T", "W", "T", "F", "S", "S"],
+      categories: [],
     },
   },
 };
 
-const dailySalesChart = {
+const lineViewsChart = {
   type: "line",
   height: 220,
-  series: [
-    {
-      name: "Sales",
-      data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
-    },
-  ],
+  series: [],
   options: {
     ...chartsConfig,
     colors: ["#fff"],
@@ -45,53 +35,70 @@ const dailySalesChart = {
     },
     xaxis: {
       ...chartsConfig.xaxis,
-      categories: [
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-      ],
+      categories: [],
     },
   },
 };
 
-const completedTasksChart = {
-  ...dailySalesChart,
-  series: [
-    {
-      name: "Tasks",
-      data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+const pieViewsChart = {
+  type: "pie",
+  height: 220,
+  series: [],
+  options: {
+    labels: [],
+    responsive: [{
+      breakpoint: 480,
+      options: {
+        chart: {
+          width: 200
+        },
+        legend: {
+          position: 'bottom'
+        }
+      }
+    }],
+    stroke: {
+      lineCap: "round",
     },
-  ],
+    markers: {
+      size: 5,
+    },
+  },
 };
+
+export const statisticsCharts = {
+  'bar': barViewsChart,
+  'line': lineViewsChart,
+  'pie': pieViewsChart
+}
 
 export const statisticsChartsData = [
   {
+    type: 'sales',
     color: "blue",
-    title: "Website View",
-    description: "Last Campaign Performance",
-    footer: "campaign sent 2 days ago",
-    chart: websiteViewsChart,
+    title: "Ventas",
+    description: " ",
+    footer: " ",
+    data: [
+      {
+        name: "Ventas",
+        data: [50, 40, 300, 320, 500, 350, 200, 230, 500]
+      },
+    ],
+    categories: ["06-01-2023", "06-15-2021", "06-22-2021", "07-01-2023", "07-14-2023", "08-08-2023", "08-26-2023", "09-02-2023", "09-10-2023"]
   },
   {
-    color: "pink",
-    title: "Daily Sales",
-    description: "15% increase in today sales",
-    footer: "updated 4 min ago",
-    chart: dailySalesChart,
-  },
-  {
+    type: 'users',
     color: "green",
-    title: "Completed Tasks",
-    description: "Last Campaign Performance",
-    footer: "just updated",
-    chart: completedTasksChart,
-  },
+    title: "Usuarios Registrador",
+    description: " ",
+    footer: " ",
+    data: [
+      {
+        name: "Usuarios",
+        data: [3, 6, 2, 8, 1, 3, 7, 2]
+      },
+    ],
+    categories: ["06-01-2023", "06-15-2021", "07-01-2023", "07-15-2023", "08-01-2023", "08-15-2023", "09-01-2023", "09-15-2023"]
+  }
 ];
-
-export default statisticsChartsData;
