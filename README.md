@@ -7,7 +7,7 @@ Bienvenido a React test
 En el directorio del proyecto, puedes correr:
 
 ### `npm install`
-### `npm run start`
+### `npm run dev`
 
 Corre la aplicación en modo desarrollo.\
 Abre [http://localhost:5173](http://localhost:5173) para verlo en el navegador.
