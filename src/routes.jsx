@@ -3,9 +3,11 @@ import {
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
   QueueListIcon,
+  DocumentMinusIcon
 } from "@heroicons/react/24/solid";
 import { Home } from "@/pages/graficas";
 import { ToDo } from "@/pages/todo";
+import { Files } from "@/pages/files";
 import { SignIn, SignUp } from "@/pages/auth";
 
 const icon = {
@@ -27,6 +29,12 @@ export const routes = [
         name: "tareas",
         path: "/tasks",
         element: <ToDo />,
+      },
+      {
+        icon: <DocumentMinusIcon {...icon} />,
+        name: "archivos",
+        path: "/files",
+        element: <Files />,
       }
     ],
   },
